@@ -8,4 +8,10 @@ it "releases working bike" do
   bike = docking_station.release_bike
   expect(bike).to be_working
 end
+it "dock's a bike" do
+  bike = Bike.new
+  docking_station = DockingStation.new
+  docking_station.dock(bike)
+  expect(docking_station.dock(bike)).to eq bike
+end
 end
